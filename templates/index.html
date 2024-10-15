@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultimodalMate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="/static/app.js" defer></script>
+    <style>
+        .markdown-body pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+        .markdown-body code {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .message-content {
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body class="h-full bg-gray-800 flex flex-col text-white">
+    <main class="flex-grow flex">
+        <div class="max-w-3xl w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+            <div id="chatHistory" class="flex-grow overflow-y-auto mb-4 p-4">
+                <!-- Chat messages will be appended here -->
+            </div>
+            
+            <div class="sticky bottom-0 bg-gray-800 p-4">
+                <div class="relative flex items-center">
+                    <input type="text" id="userInput" placeholder="Hello Mate, How may I help you?" 
+                           class="w-full p-3 pr-20 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                    <div class="absolute right-3 flex items-center space-x-2">
+                        <label for="fileUpload" class="cursor-pointer">
+                            <ion-icon name="attach-outline" class="text-gray-400 hover:text-white text-xl"></ion-icon>
+                        </label>
+                        <button id="sendButton" class="text-gray-400 hover:text-white">
+                            <ion-icon name="send" class="text-xl"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <input type="file" id="fileUpload" class="hidden" multiple accept="*">
+            </div>
+        </div>
+    </main>
+    
+    <div id="uploadStatus" class="fixed bottom-4 right-4 bg-gray-700 p-3 rounded-lg shadow-lg text-sm text-white hidden"></div>
+</body>
+</html>
