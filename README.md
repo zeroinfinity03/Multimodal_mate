@@ -254,7 +254,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 
 ### **Explanation of the Rewritten Sections**
-```
+
 1. **Project Title & Overview**:
    - **Purpose**: Introduces **Multimodal Mate**, outlining its main functions and objectives.
    - **Functionality**: Highlights its ability to process diverse user inputs like text, images, and documents using AI.
@@ -301,7 +301,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 13. **License**:
     - **Legal Information**: Specifies the project's licensing, crucial for open-source projects.
-```
+
 
 ### **Additional Recommendations:**
 
