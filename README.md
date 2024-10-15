@@ -1,3 +1,169 @@
+# Multimodal Mate
+
+**Multimodal Mate** is an advanced web application that leverages artificial intelligence to process and understand various types of user inputs, including text, images, and documents. It combines the capabilities of the **Gemini 1.5 Flash** language model for multimodal processing with a **Retrieval-Augmented Generation (RAG)** pipeline powered by **LlamaIndex**, enhancing document-based query handling. This architecture provides an intuitive interface coupled with robust backend processing.
+
+## Features
+
+- **Multimodal Input Processing**: Seamlessly handles and interprets text, images, and documents.
+- **Advanced Language Model**: Utilizes **Gemini 1.5 Flash** for state-of-the-art natural language understanding and generation.
+- **RAG Pipeline**: Employs **LlamaIndex** for efficient document indexing and retrieval, enhancing the relevance and accuracy of responses.
+- **Supported Document Types**: Processes PDFs, PowerPoint presentations (PPT), Excel spreadsheets (XLSX), CSV files, and JSON documents.
+- **Responsive User Interface**: Built with **HTML**, **Tailwind CSS**, and **JavaScript** to ensure a smooth and intuitive user experience.
+
+## Technologies Used
+
+- **Backend**: [FastAPI](https://fastapi.tiangolo.com/)
+- **Frontend**: HTML, Tailwind CSS, JavaScript
+- **AI Model**: [Gemini 1.5 Flash](https://example.com/gemini-model) *(replace with actual link if available)*
+- **Document Processing**: [LlamaIndex](https://llamaindex.readthedocs.io/en/latest/), SimpleDirectoryReader
+- **Embedding Model**: [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+
+
+## Setup and Installation
+
+
+
+## Setup and Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/multimodal_mate.git
+cd multimodal_mate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory and add your API keys and other environment variables. Example `.env` content:
+
+```env
+GOOGLE_API_KEY=your_google_api_key_here
+PERPLEXITY_API_KEY=your_perplexity_api_key_here
+GOOGLE_APPLICATION_CREDENTIALS=credentials/google_cloud_credentials.json
+```
+
+### Run the Application
+
+```bash
+uvicorn main:app --reload
+```
+
+### Access the Application
+
+Open your browser and go to [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+## Usage
+
+- **Visionary**: Provides real-time assistance for visually impaired users.
+- **Multimodal Mate**: Handles text, image, and document-based queries.
+
+## Troubleshooting
+
+- **API Keys Issues**: Ensure that you have enabled the correct APIs in the Google Cloud Console.
+- **Dependencies Issues**: Try updating `requirements.txt` and running `pip install -r requirements.txt` again.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+# Multimodal Mate
+
+**Multimodal Mate** is an advanced web application that leverages artificial intelligence to process and understand various types of user inputs, including text, images, and documents. It combines the capabilities of the **Gemini 1.5 Flash** language model for multimodal processing with a **Retrieval-Augmented Generation (RAG)** pipeline powered by **LlamaIndex**, enhancing document-based query handling. This architecture provides an intuitive interface coupled with robust backend processing.
+
+## Features
+
+- **Multimodal Input Processing**: Seamlessly handles and interprets text, images, and documents.
+- **Advanced Language Model**: Utilizes **Gemini 1.5 Flash** for state-of-the-art natural language understanding and generation.
+- **RAG Pipeline**: Employs **LlamaIndex** for efficient document indexing and retrieval, enhancing the relevance and accuracy of responses.
+- **Supported Document Types**: Processes PDFs, PowerPoint presentations (PPT), Excel spreadsheets (XLSX), CSV files, and JSON documents.
+- **Responsive User Interface**: Built with **HTML**, **Tailwind CSS**, and **JavaScript** to ensure a smooth and intuitive user experience.
+
+## Technologies Used
+
+- **Backend**: [FastAPI](https://fastapi.tiangolo.com/)
+- **Frontend**: HTML, Tailwind CSS, JavaScript
+- **AI Model**: [Gemini 1.5 Flash](https://example.com/gemini-model) *(replace with actual link if available)*
+- **Document Processing**: [LlamaIndex](https://llamaindex.readthedocs.io/en/latest/), SimpleDirectoryReader
+- **Embedding Model**: [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+
+
+## Setup and Installation
+
+
+
+## Setup and Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/multimodal_mate.git
+cd multimodal_mate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory and add your API keys and other environment variables. Example `.env` content:
+
+```env
+GOOGLE_API_KEY=your_google_api_key_here
+PERPLEXITY_API_KEY=your_perplexity_api_key_here
+GOOGLE_APPLICATION_CREDENTIALS=credentials/google_cloud_credentials.json
+```
+
+### Run the Application
+
+```bash
+uvicorn main:app --reload
+```
+
+### Access the Application
+
+Open your browser and go to [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+## Usage
+
+- **Visionary**: Provides real-time assistance for visually impaired users.
+- **Multimodal Mate**: Handles text, image, and document-based queries.
+
+## Troubleshooting
+
+- **API Keys Issues**: Ensure that you have enabled the correct APIs in the Google Cloud Console.
+- **Dependencies Issues**: Try updating `requirements.txt` and running `pip install -r requirements.txt` again.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+### **Explanation:**
+
+
+
+
+
+
+
+
 ```markdown
 # Multimodal Mate
 
@@ -85,14 +251,10 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
 
----
 
 ### **Explanation of the Rewritten Sections**
-
-#### **Project Structure Explanation**
-
+```
 1. **Project Title & Overview**:
    - **Purpose**: Introduces **Multimodal Mate**, outlining its main functions and objectives.
    - **Functionality**: Highlights its ability to process diverse user inputs like text, images, and documents using AI.
@@ -139,46 +301,17 @@ This project is licensed under the [MIT License](LICENSE).
 
 13. **License**:
     - **Legal Information**: Specifies the project's licensing, crucial for open-source projects.
+```
 
----
-
-### **Additional Tips for Enhancing the README**
+### **Additional Recommendations:**
 
 - **Add Badges**: Incorporate badges at the top for build status, license, or open issues to increase visual appeal and provide quick insights.
-  
+
   Example:
-  
+
   ```markdown
   ![License](https://img.shields.io/badge/License-MIT-blue.svg)
   ![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/multimodal_mate/build.yml?branch=main)
-  ```
 
-- **Include a Table of Contents**: For longer READMEs, a table of contents can improve navigation and user experience.
+```
 
-  Example:
-
-  ```markdown
-  ## Table of Contents
-  - [Overview](#overview)
-  - [Features](#features)
-    - [Multimodal Input Processing](#multimodal-input-processing)
-    - [Advanced Language Model](#advanced-language-model)
-    - [RAG Pipeline](#rag-pipeline)
-    - [Supported Document Types](#supported-document-types)
-    - [Responsive UI](#responsive-ui)
-  - [Technologies Used](#technologies-used)
-  - [Setup and Installation](#setup-and-installation)
-    - [Clone the Repository](#clone-the-repository)
-    - [Install Dependencies](#install-dependencies)
-    - [Configure Environment Variables](#configure-environment-variables)
-    - [Run the Application](#run-the-application)
-    - [Access the Application](#access-the-application)
-  - [Usage](#usage)
-  - [Troubleshooting](#troubleshooting)
-  - [Contributing](#contributing)
-  - [License](#license)
-  ```
-
----
-
-By following this structure, your README.md will be well-organized, informative, and engaging, effectively communicating the essence and technical depth of your **Multimodal Mate** project to potential contributors, users, and recruiters.
