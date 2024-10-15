@@ -1,117 +1,27 @@
-```markdown
 # Multimodal Mate
 
-## Overview
-
-**Multimodal Mate** is a web application designed to handle and understand various user inputs, including text, images, and documents. It leverages the **Gemini 1.5 Flash** language model for processing text and image inputs and employs a **Retrieval-Augmented Generation (RAG)** pipeline, powered by **LlamaIndex**, to manage document-based queries. This design offers an intuitive interface with comprehensive backend processing capabilities.
+**Multimodal Mate** is an advanced web application that leverages artificial intelligence to process and understand various types of user inputs, including text, images, and documents. It combines the capabilities of the **Gemini 1.5 Flash** language model for multimodal processing with a **Retrieval-Augmented Generation (RAG)** pipeline powered by **LlamaIndex**, enhancing document-based query handling. This architecture provides an intuitive interface coupled with robust backend processing.
 
 ## Features
 
-### Direct Processing with Gemini 1.5 Flash
+- **Multimodal Input Processing**: Seamlessly handles and interprets text, images, and documents.
+- **Advanced Language Model**: Utilizes **Gemini 1.5 Flash** for state-of-the-art natural language understanding and generation.
+- **RAG Pipeline**: Employs **LlamaIndex** for efficient document indexing and retrieval, enhancing the relevance and accuracy of responses.
+- **Supported Document Types**: Processes PDFs, PowerPoint presentations (PPT), Excel spreadsheets (XLSX), CSV files, and JSON documents.
+- **Responsive User Interface**: Built with **HTML**, **Tailwind CSS**, and **JavaScript** to ensure a smooth and intuitive user experience.
 
-- **Text Inputs**: Directly sent to Gemini 1.5 Flash for immediate responses based solely on text content.
-- **Image and Text Inputs**: Gemini's multimodal capability allows it to process queries combining text and images, producing responses that consider both modalities.
-- **Audio/Video Support**: While the backend supports audio and video files, the current focus is primarily on image processing.
+## Technologies Used
 
-### Retrieval-Augmented Generation (RAG) Pipeline for Document-Based Queries
+- **Backend**: [FastAPI](https://fastapi.tiangolo.com/)
+- **Frontend**: HTML, Tailwind CSS, JavaScript
+- **AI Model**: [Gemini 1.5 Flash](https://example.com/gemini-model) *(replace with actual link if available)*
+- **Document Processing**: [LlamaIndex](https://llamaindex.readthedocs.io/en/latest/), SimpleDirectoryReader
+- **Embedding Model**: [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 
-- **Supported Document Types**: PDFs, PowerPoint presentations (PPTs), Excel files (XLSX), CSV files, and JSON files are processed through the RAG pipeline.
-  
-- **Processing Workflow**:
-  - **Document Ingestion**: Uses `SimpleDirectoryReader` to read and ingest document files, eliminating the need for individual document processors.
-  - **Embedding Generation and Indexing**: Extracted content from documents is converted into embeddings using the `sentence-transformers/all-MiniLM-L6-v2` model via `HuggingFaceEmbedding` and stored in a `VectorStoreIndex` for efficient retrieval.
-  - **Contextual Retrieval**: Relevant information is retrieved from the index when a user query relates to document content.
-  - **Augmented Generation**: Retrieved document information augments the user's query, enabling Gemini 1.5 Flash to generate a response that incorporates both query and document context.
 
-## User Interface and Input Handling
+## Setup and Installation
 
-### Frontend
 
-- **HTML and Tailwind CSS**: Provides the user interface with a responsive design.
-- **JavaScript (`app.js`)**: Manages frontend logic, including user interactions, file uploads, and asynchronous API calls. Supports text input, file uploads, and displays chat history with syntax highlighting for code blocks.
-
-### Backend (FastAPI)
-
-- **Routes Defined in `main.py`**:
-  - `GET /`: Serves the main HTML page.
-  - `POST /upload`: Processes file uploads and indexing.
-  - `POST /chat`: Handles chat messages, including text, image, and document-based queries.
-
-## Document Processing and RAG Pipeline
-
-### Document Ingestion
-
-Handled by `SimpleDirectoryReader`, which processes various file types without separate processors.
-
-### Data Standardization and Chunking
-
-- **Standardization**: Text is standardized using LlamaIndex's Document objects for consistency.
-- **Chunking**:
-  - **Default Chunking Behavior**: The `VectorStoreIndex` uses default chunking strategies provided by LlamaIndex. It employs a default text splitter that chunks text into segments, typically based on character or token count. There's some overlap between chunks to maintain context.
-  - **Text Splitting and Chunking**: This process ensures that large documents are broken down into manageable pieces, allowing for efficient indexing and retrieval without losing the semantic meaning across chunks.
-
-### Embedding Generation and Indexing
-
-- Uses `HuggingFaceEmbedding` with the `sentence-transformers/all-MiniLM-L6-v2` model.
-- Embeddings are stored in a `VectorStoreIndex` for efficient similarity-based retrieval.
-
-## Query Processing and Response Generation
-
-### Direct Queries (Text and Image)
-
-- Sent directly to Gemini 1.5 Flash when no documents are indexed.
-
-### Document-Related Queries (RAG Pipeline)
-
-- When documents are present, the RAG pipeline is used for all subsequent queries.
-- Retrieves relevant document chunks using similarity search within the vector index.
-- The retrieved information augments the user's query before processing with Gemini 1.5 Flash.
-
-## Current Limitation
-
-A key limitation is that once documents are indexed, the system remains in RAG mode for all queries, potentially including irrelevant document context in responses to general questions.
-
-## Proposed Solution
-
-Implementing a relevance check in the chat endpoint could allow dynamic switching between RAG and direct processing modes based on the query's relevance to indexed content.
-
-## Integration and Workflow
-
-### Workflow Summary
-
-1. **User Interaction**: The user submits a query, which could be:
-   - A text message.
-   - An image plus text query.
-   - A query related to document content.
-
-2. **Backend Processing**:
-   - **Direct Queries**: For text and image inputs (when no documents are indexed), the query is sent directly to Gemini 1.5 Flash.
-   - **Document-Based Queries**: When documents are present, the RAG pipeline processes the query, retrieving relevant document data to augment the query.
-   - **Response Generation**: The (augmented) query is sent to Gemini 1.5 Flash for final response generation.
-
-3. **Frontend Update**: The response is displayed in the chat interface, providing real-time feedback and maintaining conversation history.
-
-## Technologies and Components Used
-
-### Frontend
-
-- **HTML and Tailwind CSS**: For the user interface and responsive design.
-- **JavaScript (`app.js`)**: For handling interactivity and API calls.
-
-### Backend
-
-- **FastAPI (`main.py`)**: For API development.
-- **CORS Middleware**: For secure frontend-backend communication.
-
-### Document Processing and Retrieval
-
-- **SimpleDirectoryReader**: For streamlined document ingestion without separate processors.
-- **VectorStoreIndex**: For efficient embedding storage and retrieval of document content.
-- Utilizes default chunking strategies provided by LlamaIndex, including text splitting and chunking based on character or token count with overlap to maintain context.
-
-### Language Model
-
-- **Gemini 1.5 Flash**: For multimodal language processing.
 
 ## Setup and Installation
 
