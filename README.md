@@ -92,7 +92,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 - **Backend**: [FastAPI](https://fastapi.tiangolo.com/)
 - **Frontend**: HTML, Tailwind CSS, JavaScript
-- **AI Model**: [Gemini 1.5 Flash](https://example.com/gemini-model) *(replace with actual link if available)*
+- **AI Model**: [Gemini 1.5 Flash](https://example.com/gemini-model) 
 - **Document Processing**: [LlamaIndex](https://llamaindex.readthedocs.io/en/latest/), SimpleDirectoryReader
 - **Embedding Model**: [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 
