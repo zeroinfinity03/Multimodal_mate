@@ -1,14 +1,16 @@
 # Multimodal Mate
 
-**Multimodal Mate** is an advanced web application that leverages artificial intelligence to process and understand various types of user inputs, including text, images, and documents. It combines the capabilities of the **Gemini 1.5 Flash** language model for multimodal processing with a **Retrieval-Augmented Generation (RAG)** pipeline powered by **LlamaIndex**, enhancing document-based query handling. This architecture provides an intuitive interface coupled with robust backend processing.
+- Multimodal Mate** is an advanced web application that leverages artificial intelligence to process and understand various types of user inputs, including text, images, and documents.
+- It combines the capabilities of the **Gemini 1.5 Flash** language model for multimodal processing with a **Retrieval-Augmented Generation (RAG)** pipeline powered by **LlamaIndex**, enhancing document-based query handling.
+- This architecture provides an intuitive interface coupled with robust backend processing.
 
 ## Features
 
-- **Multimodal Input Processing**: Seamlessly handles and interprets text, images, and documents.
-- **Advanced Language Model**: Utilizes **Gemini 1.5 Flash** for state-of-the-art natural language understanding and generation.
-- **RAG Pipeline**: Employs **LlamaIndex** for efficient document indexing and retrieval, enhancing the relevance and accuracy of responses.
-- **Supported Document Types**: Processes PDFs, PowerPoint presentations (PPT), Excel spreadsheets (XLSX), CSV files, and JSON documents.
-- **Responsive User Interface**: Built with **HTML**, **Tailwind CSS**, and **JavaScript** to ensure a smooth and intuitive user experience.
+- Multimodal Input Processing**: Seamlessly handles and interprets text, images, and documents.
+- Advanced Language Model**: Utilizes **Gemini 1.5 Flash** for state-of-the-art natural language understanding and generation.
+- RAG Pipeline**: Employs **LlamaIndex** for efficient document indexing and retrieval, enhancing the relevance and accuracy of responses.
+- Supported Document Types**: Processes PDFs, PowerPoint presentations (PPT), Excel spreadsheets (XLSX), CSV files, and JSON documents.
+- Responsive User Interface**: Built with **HTML**, **Tailwind CSS**, and **JavaScript** to ensure a smooth and intuitive user experience.
 
 ## Technologies Used
 
